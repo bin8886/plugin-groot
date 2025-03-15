@@ -1,0 +1,28 @@
+{
+  "name": "@elizaos-plugins/plugin-groot",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "clean": "rm -rf dist",
+    "lint": "biome lint .",
+    "lint:fix": "biome check --apply .",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@elizaos/core": "0.25.9",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "tsup": "8.3.5"
+  },
+  "agentConfig": {
+    "pluginType": "elizaos:client:1.0.0",
+    "pluginParameters": {}
+  }
+}
